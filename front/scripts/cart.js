@@ -51,23 +51,26 @@ fetch('http://localhost:3000/api/products/')
       </article>
         `;
         productSection.innerHTML += productsCart;
-        })})
-
-         // Supression de la ligne  au clic du bouton suppr
-         let deleteItems = document.getElementById("deleteItems");
-         deleteItems.addEventListener("click", (event) =>{
+        let deleteItems = document.getElementById("deleteItems");
+        deleteItems.addEventListener("click", (event) =>{
           event.preventDefault();
-          
-          
-      
-      } );
-
           function deleteItem(e) {
             let index = e.getAttribute("index");
             cart.splice(index, 1);
             localStorage.setItem("Products", JSON.stringify(cart));
             location.reload();
           }
+        })})
+
+         // Supression de la ligne  au clic du bouton suppr
+         
+         
+          
+          
+      
+      } );
+
+          
 
         function updateQty(e) {
           let index = e.getAttribute("index");
