@@ -72,7 +72,7 @@
 
                 <div class="item__content__settings__quantity">
                   <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
-                  <input type="number" name="itemQuantity" min="1" max="100" value="1" id="quantity" pattern="[0-9]">
+                  <input type="number" name="itemQuantity" onkeypress="return event.charCode >= 48 && event.charCode <= 57"  min="1" max="100" value="1" id="quantity" pattern="[0-9]{1,3}">
                   <p id="GFG_DOWN" style="color: rgb(255, 0, 0);"></p>
                 </div>
               </div>
