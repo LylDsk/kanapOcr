@@ -1,12 +1,10 @@
-fetch('http://localhost:3000/api/products')
-.then((response) => response.json())
-.then((data) => {
-  console.log(data);
+fetch("http://localhost:3000/api/products")
+  .then((response) => response.json())
+  .then((data) => {
+    let productSection = document.getElementById("items");
 
-  let productSection = document.getElementById("items");
-
-      for (i = 0; i < data.length; i++) {
-        const productCard = `
+    for (i = 0; i < data.length; i++) {
+      const productCard = `
           <a href="./product.html?id=${data[i]._id}">
             <article>
               <img
@@ -18,14 +16,11 @@ fetch('http://localhost:3000/api/products')
                 ${data[i].description}
               </p>
               <p class="productDescription">
-                ${data[i].price } €
+                ${data[i].price} €
               </p>
             </article>
           </a>
         `;
-        productSection.innerHTML += productCard;
-      }
-    });
-;
-
-
+      productSection.innerHTML += productCard;
+    }
+  });

@@ -78,7 +78,17 @@
               </div>
 
               <div class="item__content__addButton">
-                <button id="addToCart">Ajouter au panier</button>
+                <button data-modal-target="#modal" id="addToCart">Ajouter au panier</button>
+                <div class="modal" id="modal">
+                  <div class="modal-header">
+                    <div id="boxname" class="title"></div>
+                    <button data-close-button class="close-button">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    Souhaitez vous consulter le panier?</div>
+                    <button class="valid" id="validBtn" href="./cart.html">Oui, merci.</a>
+                </div>
+                <div id="overlay"></div>
               </div>
 
             </div>
